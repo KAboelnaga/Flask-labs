@@ -1,0 +1,11 @@
+<h2>User Form</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name() }}<br><br>
+    {{ form.age.label }} {{ form.age() }}<br><br>
+    {{ form.submit() }}
+</form>
+
+{% if name and age %}
+    <p>Hello {{ name }}! You are {{ age }} years old.</p>
+{% endif %}
