@@ -1,0 +1,8 @@
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name() }}
+    {{ form.submit() }}
+</form>
+{% if name %}
+<p>Hello, {{ name }}!</p>
+{% endif %}
